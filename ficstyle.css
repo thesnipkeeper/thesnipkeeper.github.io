@@ -1,0 +1,120 @@
+
+.ficsize {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 800px;
+	line-height: 1.2;
+	font-family:calibri;
+	text-indent: 25px;
+	font-size: 17px;
+	padding-bottom: 50px
+}
+
+.toc {
+	position: fixed;
+	top: 20px;
+	}
+	
+.info {
+	max-width: 240px;
+	font-size: 12px;
+	color: #FF0069;
+	background-color: #FFE5E5;
+	padding: 1px 5px 1px 10px;
+	border-radius: 0px 20px 20px 0px;
+	margin-top: 40px
+}
+
+body {
+	font-family:arial;
+	font-size: 14px;
+}
+
+h2 {text-align:center;
+color:#FF0069;
+background-color: white;
+
+}
+
+h1 {
+	color: #FF0069;
+	text-align:center;}
+	
+p  {
+	margin-bottom: 8px;
+	margin-top: 8px
+}
+		
+
+hr {
+	border-color: #A5FF9F;
+	border-style: solid;
+	width: 90%;
+}
+
+a:link, a:visited {
+  color: #FF0069;
+text-decoration: none;
+font-weight: 700;
+}
+a:hover {
+  color: #FF9200;
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+ 
+}
+
+li { float: left;
+	width: 200px;
+	}
+
+li a {
+  display: block;
+  padding: 5px 10px;
+  text-decoration: none;
+  background-color:#FFBCD0;
+  margin-bottom: 2px
+  
+}
+
+li a:hover {
+  background-color:#fff09f;
+  color:  #FF9200;
+}
+
+@media screen and (max-width: 900px) {
+.toc {
+	position: fixed;
+	top: 70px
+	}
+.toc2 {
+	display:none
+	}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 150px;
+ 
+}
+
+li { 
+	width: 150px;
+	}
+
+
+.direct {
+	margin-left: 170;
+	margin-right: auto;
+	max-width: 450px;
+	font-size: 13px
+	}
+	
+}

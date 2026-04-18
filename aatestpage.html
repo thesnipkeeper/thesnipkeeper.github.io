@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conlang Translator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        textarea {
+            width: 100%;
+            height: 100px;
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+        }
+        .output {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Conlang Translator</h1>
+    <div class="container">
+        <h3>Translate English to Conlang</h3>
+        <textarea id="englishInput" placeholder="Enter English text..."></textarea>
+        <button onclick="translateToConlangText()">Translate to Conlang</button>
+
+        <div class="output" id="conlangOutput"></div>
+
+        <h3>Translate Conlang to English</h3>
+        <textarea id="conlangInput" placeholder="Enter Conlang text..."></textarea>
+        <button onclick="translateToEnglishText()">Translate to English</button>
+
+        <div class="output" id="englishOutput"></div>
+    </div>
+
+    <script>
+        // Dictionary for translating English to conlang
+        const englishToConlang = {
+             'a': 'i',
+    'able': 'cap',
+    'act': 'stil',
+    'acted': 'stilt',
+    'after': 'ettr',
+    'afternoon': 'frada',
+    'again': 'oda',
+    'all': 'hel',
+    'almost': 'elist',
+    'alone': 'inin',
+    'also': 'al',
+    'always': 'heltid',
+    'am': 'er',
+    'and': 'ot',
+    'apartment': 'duks',
+    'appear': 'sho',
+    'appeared': 'shot',
+    'area': 'uqu',
+    'ask': 'spor',
+    'asked': 'sport',
+    'at': 'acut',
+    'ate': 'adot',
+    'bad': 'pas',
+    'be': 'ge',
+    'because': 'le',
+    'been': 'geel',
+    'before': 'for',
+    'believe': 'glab',
+    'believed': 'glabt',
+    'big': 'stor',
+    'black': 'svar',
+    'blue': 'blat',
+    'book': 'zij',
+    'bottom': 'korst',
+    'bowl': 'zol',
+    'breath': 'sash',
+    'breathe': 'ash',
+    'breathed': 'asht',
+    'bring': 'rok',
+    'brother': 'bror',
+    'brought': 'rokt',
+    'but': 'set',
+    'call': 'pin',
+    'called': 'pint',
+    'came': 'punt',
+    'can': 'tan',
+    'cannot': 'tak',
+    'care': 'tutel',
+    'cared': 'tutelt',
+    'chair': 'buq',
+    'child': 'fili',
+    'children': 'filin',
+    'city': 'bex',
+    'close': 'delta',
+    'close': 'luk',
+    'closed': 'lukt',
+    'coffee': 'bonsaf',
+    'cold': 'frig',
+    'cold': 'areth',
+    'come': 'pun',
+    'correct': 'dart',
+    'couch': 'bib',
+    'could': 'tant',
+    'count': 'nind',
+    'count': 'pind',
+    'country': 'bims',
+    'dad': 'far',
+    'dark': 'svark',
+    'daughter': 'cusq',
+    'day': 'die',
+    'daylight': 'midi',
+    'days': 'dine',
+    'dead': 'doddr',
+    'death': 'dod',
+    'deep': 'stolg',
+    'did': 'ort',
+    'die': 'doddi',
+    'died': 'doddit',
+    'different': 'alum',
+    'do': 'or',
+    'door': 'ciq',
+    'down': 'tarp',
+    'drank': 'gerat',
+    'drink': 'saf',
+    'drink': 'ger',
+    'drinks': 'safin',
+    'during': 'helid',
+    'early': 'frat',
+    'easy': 'rug',
+    'eat': 'ado',
+    'eighth': 'attan',
+    'either': 'ellr',
+    'eleventh': 'telfin',
+    'end': 'colir',
+    'end': 'col',
+    'ended': 'colt',
+    'enjoy': 'mori',
+    'evening': 'spadi',
+    'exact': 'spec',
+    'eye': 'ocula',
+    'eyes': 'oculan',
+    'face': 'yuzit',
+    'faces': 'yuzin',
+    'fact': 'dubs',
+    'fade': 'nalm',
+    'faded': 'nalmt',
+    'family': 'frup',
+    'fat': 'chon',
+    'father': 'far',
+    'feel': 'gro',
+    'felt': 'grot',
+    'fever': 'caleth',
+    'few': 'fown',
+    'fifth': 'fem',
+    'find': 'won',
+    'first': 'int',
+    'floor': 'lod',
+    'flu': 'cath',
+    'food': 'doc',
+    'foot': 'pend',
+    'for': 'so',
+    'found': 'wont',
+    'fourth': 'firn',
+    'friend': 'palr',
+    'from': 'tra',
+    'fun': 'moro',
+    'future': 'movt',
+    'game': 'ful',
+    'gave': 'hownt',
+    'get': 'hik',
+    'give': 'hown',
+    'go': 'rid',
+    'good': 'fas',
+    'goodbye': 'part',
+    'got': 'hikit',
+    'government': 'imperia',
+    'government': 'fitams',
+    'great': 'lok',
+    'group': 'frup',
+    'growl': 'rigg',
+    'growled': 'rigget',
+    'growls': 'riggr',
+    'had': 'post',
+    'had': 'hart',
+    'hand': 'gand',
+    'happen': 'zas',
+    'happened': 'zast',
+    'happy': 'gut',
+    'has': 'pos',
+    'has': 'har',
+    'have': 'ha',
+    'he': 'fe',
+    'head': 'gac',
+    'hear': 'spir',
+    'heard': 'spirt',
+    'heat': 'ardor',
+    'heat': 'ardo',
+    'held': 'alvet',
+    'hello': 'joit',
+    'help': 'ax',
+    'helped': 'axt',
+    'her': 'nen',
+    'here': 'delt',
+    'hers': 'nent',
+    'herself': 'nenen',
+    'hey': 'joi',
+    'high': 'stark',
+    'him': 'fen',
+    'himself': 'fenen',
+    'his': 'fent',
+    'hold': 'alve',
+    'home': 'gila',
+    'house': 'gira',
+    'huff': 'god',
+    'huffed': 'godt',
+    'i': 'a',
+    'if': 'im',
+    'important': 'wikt',
+    'in': 'ern',
+    'is': 'ir',
+    'is black': 'svattr',
+    'is blue': 'blattr',
+    'is living': 'vittr',
+    'is red': 'rottr',
+    'is yellow': 'gelbr',
+    'it': 'et',
+    'it had been': 'twas',
+    'it is': 'twir',
+    'it isn\'t': 'tint',
+    'it was': 'twas',
+    'its': 'ets',
+    'itself': 'etsen',
+    'job': 'arbid',
+    'jump': 'sprin',
+    'jumped': 'sprint',
+    'just': 'nur',
+    'knew': 'kenat',
+    'knock': 'bank',
+    'knocked': 'bankt',
+    'know': 'kena',
+    'last': 'kors',
+    'last': 'rort',
+    'late': 'spat',
+    'lead': 'feer',
+    'leave': 'ye',
+    'led': 'feert',
+    'left': 'pect',
+    'left': 'yet',
+    'life': 'vita',
+    'light (color)': 'sveer',
+    'light (without weight)': 'sverug',
+    'light': 'lit',
+    'lights': 'litin',
+    'like': 'mori',
+    'like': 'som',
+    'line': 'lad',
+    'little': 'por',
+    'live': 'leb',
+    'lived': 'lebt',
+    'long': 'jolg',
+    'look': 'erk',
+    'looked': 'erkit',
+    'lose': 'per',
+    'lost': 'pert',
+    'love': 'amar',
+    'low': 'starp',
+    'made': 'mart',
+    'make': 'mar',
+    'man': 'fir',
+    'many': 'flen',
+    'me': 'an',
+    'meet': 'mol',
+    'met': 'molt',
+    'middle': 'mid',
+    'mine': 'arn',
+    'minute': 'seksti',
+    'minutes': 'sekstin',
+    'mom': 'mor',
+    'money': 'lima',
+    'month': 'mensi',
+    'months': 'mensin',
+    'more': 'adar',
+    'morning': 'fradi',
+    'most': 'ost',
+    'mother': 'mor',
+    'move': 'gor',
+    'moved': 'gort',
+    'much': 'relf',
+    'music': 'lorj',
+    'myself': 'aren',
+    'never': 'keltid',
+    'new': 'ny',
+    'news': 'fama',
+    'next': 'fut',
+    'nice': 'net',
+    'night': 'nat',
+    'ninth': 'nin',
+    'no': 'sen',
+        };
+
+        // Dictionary for translating conlang to English
+        const conlangToEnglish = {
+            'i': 'a',
+            'cap': 'able',
+            'stil': 'act',
+            'stilt': 'acted',
+            'ettr': 'after',
+            'frada': 'afternoon',
+            'oda': 'again',
+            'hel': 'all',
+            'elist': 'almost',
+            'inin': 'alone',
+            // Add the rest of the dictionary here
+        };
+
+        // Function to translate from English to Conlang
+        function translateToConlang(sentence) {
+            return sentence.split(' ').map(word => englishToConlang[word.toLowerCase()] || word).join(' ');
+        }
+
+        // Function to translate from Conlang to English
+        function translateToEnglish(sentence) {
+            return sentence.split(' ').map(word => conlangToEnglish[word.toLowerCase()] || word).join(' ');
+        }
+
+        // Translate English to Conlang and display
+        function translateToConlangText() {
+            const englishText = document.getElementById('englishInput').value;
+            const conlangTranslation = translateToConlang(englishText);
+            document.getElementById('conlangOutput').textContent = conlangTranslation;
+        }
+
+        // Translate Conlang to English and display
+        function translateToEnglishText() {
+            const conlangText = document.getElementById('conlangInput').value;
+            const englishTranslation = translateToEnglish(conlangText);
+            document.getElementById('englishOutput').textContent = englishTranslation;
+        }
+    </script>
+</body>
+</html>
