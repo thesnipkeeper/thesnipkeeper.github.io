@@ -1,0 +1,64 @@
+<!DOCTYPE>
+<html>
+<head> <link rel="icon" href="C:\Users\denti\Google Drive\fanficcode\favicon-16x16.png">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+	var array1 = ["Umbrella Academy","Stargate","Scorpion","Schitt's Creek","Kollok 1991","Critical Role","Morganville","Life is Strange","In Plain Sight","Common Law","Breaking In","Cursebusters","Pactmakers","Awful Superheroes","Port Urbis","Fernville","Karen from Work","Underground","Internet Famous"];
+	var array2 = ["Ear infection","Food poisoning","Bronchitis","Flu","Stomach flu","Cold","Emotional","Sinus infection"];
+	var array3 = ["Crushes","Siblings","Acquaintances","Best friends","Romantic","Work/school partners","Parental figure","Exes"];
+	var array4 = ["Workplace","School","Classroom","School cafeteria","Hospital room","Waiting room","Hospital cafeteria","House","Yard","Apartment","Diner","Fast food restaurant","Fancy restaurant","Store","Pharmacy","Car","Cabin","Motel","Hotel","B&B","Market","Concert","Grocery store","Park","Dorm room","Shared bedroom"];
+	var array5 = ["Sunrise","Sunset","Middle of the night","Mid-morning","Noon","Evening"];
+
+function generator(){
+  var randomNumber1 = Math.floor(Math.random() * (array1.length));
+  var randomNumber2 = Math.floor(Math.random() * (array2.length));
+  var randomNumber3 = Math.floor(Math.random() * (array3.length));
+  var randomNumber4 = Math.floor(Math.random() * (array4.length));
+  var randomNumber5 = Math.floor(Math.random() * (array5.length));
+  if (array1Check.checked == true) {
+	  document.getElementById('array1Display').innerHTML = array1[randomNumber1];
+      }
+  if (array2Check.checked == true) {
+      document.getElementById('array2Display').innerHTML = array2[randomNumber2];
+	  }
+  if (array3Check.checked == true) {
+      document.getElementById('array3Display').innerHTML = array3[randomNumber3];
+	  }	
+  if (array4Check.checked == true) {
+     document.getElementById('array4Display').innerHTML = array4[randomNumber4];
+      }
+  if (array5Check.checked == true) {
+     document.getElementById('array5Display').innerHTML = array5[randomNumber5];
+      }
+}
+</script>
+</head>
+<title>NaNo Fic Genernnator</title>
+<body> 
+<div class="gendirect">
+<div class="checkboxes">
+<ul>
+	<li><input type="checkbox" id="array1Check"><label>Universe</label></li>
+	<li><input type="checkbox" id="array2Check"><label>Torture method</label></li>
+	<li><input type="checkbox" id="array3Check"><label>Relationship</label></li>
+	<li><input type="checkbox" id="array4Check"><label>Location</label></li>
+	<li><input type="checkbox" id="array5Check"><label>Time of day</label></li>
+</ul>
+</div>
+<h1>NaNo Fic Generator</h1>
+
+		<div class="center">
+		
+		<button class="genbutton" onClick="generator()">YEET</button>
+		</div>
+			<div class="genresultspace">
+				<p class="gentext">Universe: <br><span class="genresult" id="array1Display"></span>
+				<br class="gentext">Torture method: <br><span class="genresult" id="array2Display"></span>
+				<br class="gentext">Relationship: <br><span class="genresult" id="array3Display"></span>
+				<br class="gentext">Location: <br><span class="genresult" id="array4Display"></span>
+				<br class="gentext">Time of day: <br><span class="genresult" id="array5Display"></span></p>
+			</div>
+	</div>
+
+</body>
+</html>

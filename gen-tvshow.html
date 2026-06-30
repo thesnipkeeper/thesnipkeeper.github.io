@@ -1,0 +1,53 @@
+<!DOCTYPE>
+<html>
+<head> <link rel="icon" href="C:\Users\denti\Google Drive\fanficcode\favicon-16x16.png">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="C:\Users\denti\Google Drive\fanficcode\ficlist.css">
+<link rel="stylesheet" type="text/css" href="C:\Users\denti\Google Drive\profiles\navbar.css">
+</head>
+<title>What to watch?</title>
+<body> <div class="navbar"> <a href="file:///C:/Users/denti/Google%20Drive/profiles/charlist.html">Characters</a> <a href="file:///C:/Users/denti/Google%20Drive/fanficcode/ZZ-ficsoffline.html">Fanfics</a> <a href="file:///C:/Users/denti/Google%20Drive/originalcode/zz-orginalfics.html">Original Fics</a><a href="file:///C:/Users/denti/Google%20Drive/profiles/genlist.html">Generators</a> </div>
+</div> 
+<div class="ocficlist"> 
+<div class="gendirect">
+	<div class="checkboxes">
+<ul>
+	<li><input type="checkbox" id="array1Check"><label>Classic</label></li>
+	<li><input type="checkbox" id="array2Check"><label>Adventurous</label></li>
+</ul>
+</div>
+<h1>What to watch?</h1>
+<br>
+
+		<div class="center">
+		<ul>
+			<li><button class="mgenbutton" onClick="generator()">YEET</button></li>
+		</ul>
+		</div>
+			<div class="genresultspace">
+				<p class="gentext"><span class="genresult" id="array1Display"></span>
+				<br class="gentext"><br><span class="genresult" id="array2Display"></span></p>
+			</div>
+	</div>
+<script>
+	var array1 = ["White Collar","Shadowhunters","Critical Role 2","Common Law","The Librarians","Umbrella Academy 1","In Plain Sight","Undeadwood","Saving Hope","Critical Role 1","The Vow","Kollok 1991"]
+	var array2 = ["White Collar","Shadowhunters","Critical Role 2","Common Law","The Librarians","Umbrella Academy 1","In Plain Sight","Undeadwood","Saving Hope","Critical Role 1","The Vow","Kollok 1991","Outsourced","Backstrom","Intelligence","The Finder","Warehouse 13","Grimm","Better Off Ted","Instinct","Moominvalley"]
+
+
+function generator(){
+  var randomNumber1 = Math.floor(Math.random() * (array1.length));
+  var randomNumber2 = Math.floor(Math.random() * (array2.length));
+	var checkBox = document.getElementById("array1Check");
+	var checkBox = document.getElementById("array2Check");
+
+	
+  if (array1Check.checked == true){
+  document.getElementById('array1Display').innerHTML = array1[randomNumber1];
+      }
+  if (array2Check.checked == true) {
+      document.getElementById('array2Display').innerHTML = array2[randomNumber2];
+	  }
+}
+</script>
+</body>
+</html>

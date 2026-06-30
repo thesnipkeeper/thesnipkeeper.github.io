@@ -1,0 +1,33 @@
+<!DOCTYPE>
+<html>
+<head> <link rel="icon" href="C:\Users\denti\Google Drive\fanficcode\favicon-16x16.png">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="C:\Users\denti\Google Drive\fanficcode\ficlist.css">
+<link rel="stylesheet" type="text/css" href="C:\Users\denti\Google Drive\profiles\navbar.css">
+</head>
+<title>Beginning Generator</title>
+<body> <div class="navbar"> <a href="file:///C:/Users/denti/Google%20Drive/profiles/charlist.html">Characters</a> <a href="file:///C:/Users/denti/Google%20Drive/fanficcode/ZZ-ficsoffline.html">Fanfics</a> <a href="file:///C:/Users/denti/Google%20Drive/originalcode/zz-orginalfics.html">Original Fics</a><a href="file:///C:/Users/denti/Google%20Drive/profiles/genlist.html">Generators</a> </div> 
+</div>
+<div class="ocficlist"> 
+<div class="gendirect">
+<h1>Beginning Generator</h1>
+<br>
+<div class="center">
+<button class="genbutton" onClick="generator()">YEET</button>
+</div>
+<div class="genresultspace">
+<p class="genresultname" id="beginningDisplay"></p>
+</div>
+</div>
+<script>
+	var beginnings = ["sc waking up after being passed out","ct wondering where sc is and finding them sick","sc cold and doesnt know why","someone waking ct up when sc is sick in the middle of the night","ct heading to sc’s home after getting a call","sc taking their temp","ct coming home and finding sc already in bed","ct coming to work place early and finding sc already there","sc camped in front of the toilet","sc stuck somewhere with ct","ct being scared of germs while sc is sick","sc sick and depressed with ct cuddling","sc drinking a heckton of coffee and not sleeping","sc in the car feeling sick","ct asking sc if theyre feeling ok","sc waking up with the intention of going about their day","sc waking ct in the middle of the night when they feel sick","ct bringing sc soup","ct watching sick sc who hasnt admitted to being sick","ct guilty not being there for sc","ct going to the bathroom to check on sc","sc throwing up in a public bathroom and someone (ct) hearing them","sc mentioning that someone they know is sick","ct waking up to find sc taking their own temp","ct telling sc to rest when theyre working","ec asking ct if sc is better","sc hanging out at cts workplace and feeling weird","ct running into sc in a shared space and finding out theyre still sick ","ct going to sc for a reason besides sc","sc getting ready to go somewhere they have to go to","sc going to ct in the middle of the night to cuddle","sc waking up after a rly bad night","sc leaving to hide away without telling anyone why","sc trying to convince ct they can do stuff when they clearly cant","ct and ec observing sc","sc waiting for a prescription","sc and ct at the store","waking up, ct checking sc’s temp","sc and ct cuding when ct realizes that sc has a fever","ec observing sc and ct both sick","sc and ct both in bed sick","sc is having a bad day ","sc having been in bed all day when their friends/family return"];
+function generator(){
+
+	var beginning = beginnings[Math.floor(Math.random() * beginnings.length)]
+    document.getElementById('beginningDisplay').innerHTML = beginning;
+};
+
+</script>
+
+</body>
+</html>

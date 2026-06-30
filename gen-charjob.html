@@ -1,0 +1,32 @@
+<!DOCTYPE>
+<html>
+<head> <link rel="icon" href="C:\Users\denti\Google Drive\fanficcode\favicon-16x16.png">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="C:\Users\denti\Google Drive\fanficcode\ficlist.css">
+<link rel="stylesheet" type="text/css" href="C:\Users\denti\Google Drive\profiles\navbar.css">
+</head>
+<title>Occupation Generator</title>
+<body> <div class="navbar"> <a href="file:///C:/Users/denti/Google%20Drive/profiles/charlist.html">Characters</a> <a href="file:///C:/Users/denti/Google%20Drive/fanficcode/ZZ-ficsoffline.html">Fanfics</a> <a href="file:///C:/Users/denti/Google%20Drive/originalcode/zz-orginalfics.html">Original Fics</a><a href="file:///C:/Users/denti/Google%20Drive/profiles/genlist.html">Generators</a> </div> 
+</div>
+<div class="ocficlist"> 
+<div class="gendirect">
+<h1>Occupation Generator</h1>
+<br>
+<div class="center">
+<button class="genbutton" onClick="generator()">YEET</button>
+</div>
+<div class="genresultspace">
+<p class="genresultname" id="jobDisplay"></p>
+</div>
+</div>
+<script>
+	var array1 = ["Computer programmer","Singer","Artist","Lawyer","Waiter","Psychologist","Psychiatrist","Novelist","Reporter","Blogger","Store worker","Professor","Teacher","Youth administrator","Mortician","Medical examiner","Musician","Assassin","Servant","Bartender","Robotics engineer","Personal assistant","Herbalist","Chef","Barista","Law student","Medical student","Con artist","Pickpocket","Doctor","Pediatrician","Archaeologist ","Art historian","Historian","Forger","Hacker","Biologist","Chemist","Detective","Police officer","FBI agent","Librarian","Shop owner","Restaurant owner","Blacksmith","Mechanic","Veterinary assistant","Makeup artist","Medical assistant","Forensic specialist","Inventor","Publicist","CEO","Events planner","Actor","Lockpicker","Grifter","Florist","Carpenter","Accountant","Archivist","Architect","Illustrator","Interpreter","Jewelry maker ","Journalist","Lab tech","Astronomer","Art dealer","Kennel worker","Hair stylist","Baker","Minister","Model","Property caretaker","Nurse","Paramedic","Cleaner","Pharmacist","Photographer","Caterer","Pilot","Prison guard","Editor","Ghostwriter","Museum curator","Researcher","Receptionist","Sculptor","Social worker","Student","Veterinarian","Electrician","Firefighter","Farmer","Farm worker","Fashion designer","Undertaker","Healthcare assistant","Groomer","Gardener","Funeral director","Foster parent","Genealogist"];
+function generator(){
+	var randomNumber = Math.floor(Math.random() * (array1.length));
+    document.getElementById('jobDisplay').innerHTML = array1[randomNumber];
+};
+
+</script>
+
+</body>
+</html>

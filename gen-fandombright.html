@@ -1,0 +1,35 @@
+<!DOCTYPE>
+<html>
+<head> <link rel="icon" href="C:\Users\denti\Google Drive\fanficcode\favicon-16x16.png">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="C:\Users\denti\Google Drive\fanficcode\ficlist.css">
+<link rel="stylesheet" type="text/css" href="C:\Users\denti\Google Drive\profiles\navbar.css">
+</head>
+<title>Bright Sessions Generator</title>
+<body> <div class="navbar"> <a href="file:///C:/Users/denti/Google%20Drive/profiles/charlist.html">Characters</a> <a href="file:///C:/Users/denti/Google%20Drive/fanficcode/ZZ-ficsoffline.html">Fanfics</a> <a href="file:///C:/Users/denti/Google%20Drive/originalcode/zz-orginalfics.html">Original Fics</a><a href="file:///C:/Users/denti/Google%20Drive/profiles/genlist.html">Generators</a> </div>
+</div> 
+<div class="ocficlist"> 
+<div class="gendirect">
+<h1>Bright Sessions Generator</h1>
+<br>
+		<div class="center">
+		<button class="genbutton" onClick="generator()">YEET</button>
+		</div>
+			<div class="genresultspace">
+				<p class="gentext">Peeps: <br><span class="genresult" id="scDisplay"></span>
+				<br class="gentext">Torture method: <br><span class="genresult" id="tortureDisplay"></span></p>
+			</div>
+	</div>
+<script>
+	var array1 = ["Adam and Caleb","Joan and Owen","Joan and Sam","Mark and Sam","Chloe and Sam","Chloe and Joan","Caleb and Chloe","Owen and Sam","Adam and Joan","Adam and Chloe", "Caleb and Sam","Joan and Mark","Damien and Mark"]
+	var array4 = ["Flu","Stomach flu","Food poisoning","Cold","Emotional","Plot weirdness","Injury", "Misc"];
+function generator(){
+    var randomNumber1 = Math.floor(Math.random() * (array1.length));
+    document.getElementById('scDisplay').innerHTML = array1[randomNumber1];
+	var randomNumber4 = Math.floor(Math.random() * (array4.length));
+    document.getElementById('tortureDisplay').innerHTML = array4[randomNumber4];
+}
+
+</script>
+</body>
+</html>

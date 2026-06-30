@@ -1,0 +1,43 @@
+<!DOCTYPE>
+<html>
+<head> <link rel="icon" href="C:\Users\denti\Google Drive\fanficcode\favicon-16x16.png">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="C:\Users\denti\Google Drive\fanficcode\ficlist.css">
+<link rel="stylesheet" type="text/css" href="C:\Users\denti\Google Drive\profiles\navbar.css">
+</head>
+<title>Appearance Generator</title>
+<body> <div class="navbar"> <a href="file:///C:/Users/denti/Google%20Drive/profiles/charlist.html">Characters</a> <a href="file:///C:/Users/denti/Google%20Drive/fanficcode/ZZ-ficsoffline.html">Fanfics</a> <a href="file:///C:/Users/denti/Google%20Drive/originalcode/zz-orginalfics.html">Original Fics</a><a href="file:///C:/Users/denti/Google%20Drive/profiles/genlist.html">Generators</a> </div>
+</div> 
+<div class="ocficlist"> 
+<div class="gendirect">
+<h1>Appearance Generator</h1>
+<br>
+		<div class="center">
+		<button class="genbutton" onClick="generator()">YEET</button>
+		</div>
+			<div class="genresultspace">
+				<p class="gentext">Hair: <br><span class="genresult" id="hairDisplay"></span>
+				<br class="gentext">Eyes: <br><span class="genresult" id="array2Display"></span>
+				<br class="gentext"> Height: <br><span class="genresult" id="array3Display"></span>
+				<br class="gentext">Body type: <br><span class="genresult" id="array4Display"></span></p>
+			</div>
+	</div>
+<script>
+	var array1 = ["Red","Black","Brown","Blonde","Multicolor"];
+	var array2 = ["Brown","Hazel","Blue","Green","Multicolor"];
+	var array3 = ["Freakishly tall","Averagely tall","Averagely average","Short"];
+	var array4 = ["Chubby","Averagely pudgy","Skinny","Muscular","Fit"];
+function generator(){
+	var randomNumber1 = Math.floor(Math.random() * (array1.length));
+    document.getElementById('hairDisplay').innerHTML = array1[randomNumber1];
+    var randomNumber2 = Math.floor(Math.random() * (array2.length));
+    document.getElementById('array2Display').innerHTML = array2[randomNumber2];
+    var randomNumber3 = Math.floor(Math.random() * (array3.length));
+    document.getElementById('array3Display').innerHTML = array3[randomNumber3];
+	var randomNumber4 = Math.floor(Math.random() * (array4.length));
+    document.getElementById('array4Display').innerHTML = array4[randomNumber4];
+}
+
+</script>
+</body>
+</html>

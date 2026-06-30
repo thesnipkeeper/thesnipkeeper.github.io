@@ -1,0 +1,39 @@
+<!DOCTYPE>
+<html>
+<head> <link rel="icon" href="C:\Users\denti\Google Drive\fanficcode\favicon-16x16.png">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="C:\Users\denti\Google Drive\fanficcode\ficlist.css">
+<link rel="stylesheet" type="text/css" href="C:\Users\denti\Google Drive\profiles\navbar.css">
+</head>
+<title>Magicians Generator</title>
+<body> <div class="navbar"> <a href="file:///C:/Users/denti/Google%20Drive/profiles/charlist.html">Characters</a> <a href="file:///C:/Users/denti/Google%20Drive/fanficcode/ZZ-ficsoffline.html">Fanfics</a> <a href="file:///C:/Users/denti/Google%20Drive/originalcode/zz-orginalfics.html">Original Fics</a><a href="file:///C:/Users/denti/Google%20Drive/profiles/genlist.html">Generators</a> </div>
+</div> 
+<div class="ocficlist"> 
+<div class="gendirect">
+<h1>Magicians Generator</h1>
+<br>
+		<div class="center">
+		<button class="genbutton" onClick="generator()">YEET</button>
+		</div>
+			<div class="genresultspace">
+				<p class="gentext">SC: <br><span class="genresult" id="scDisplay"></span>
+				<br class="gentext">Location: <br><span class="genresult" id="locationDisplay"></span>
+				<br class="gentext">Torture method: <br><span class="genresult" id="tortureDisplay"></span></p>
+			</div>
+	</div>
+<script>
+	var array1 = ["Eliot","Quentin"]
+	var array3 = ["SC's room","CT's room","Classroom","Library","Café","The cottage","The castle","NC place"]
+	var array4 = ["Flu","Stomach flu", "Food poisoning","Cold","Emotional","Plot weirdness","Injury","Misc"];
+function generator(){
+    var randomNumber1 = Math.floor(Math.random() * (array1.length));
+    document.getElementById('scDisplay').innerHTML = array1[randomNumber1];
+    var randomNumber3 = Math.floor(Math.random() * (array3.length));
+    document.getElementById('locationDisplay').innerHTML = array3[randomNumber3];
+	var randomNumber4 = Math.floor(Math.random() * (array4.length));
+    document.getElementById('tortureDisplay').innerHTML = array4[randomNumber4];
+}
+
+</script>
+</body>
+</html>

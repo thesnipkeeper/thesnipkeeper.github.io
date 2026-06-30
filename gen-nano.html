@@ -1,0 +1,75 @@
+<!DOCTYPE>
+<html>
+<head> <link rel="icon" href="C:\Users\denti\Google Drive\fanficcode\favicon-16x16.png">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="C:\Users\denti\Google Drive\fanficcode\ficlist.css">
+<link rel="stylesheet" type="text/css" href="C:\Users\denti\Google Drive\profiles\navbar.css">
+</head>
+<title>NaNo Fic Generator</title>
+<body> <div class="navbar"> <a href="file:///C:/Users/denti/Google%20Drive/profiles/charlist.html">Characters</a> <a href="file:///C:/Users/denti/Google%20Drive/fanficcode/ZZ-ficsoffline.html">Fanfics</a> <a href="file:///C:/Users/denti/Google%20Drive/originalcode/zz-orginalfics.html">Original Fics</a><a href="file:///C:/Users/denti/Google%20Drive/profiles/genlist.html">Generators</a> </div>
+</div> 
+<div class="ocficlist"> 
+<div class="gendirect">
+	<div class="checkboxes">
+<ul>
+	<li><input type="checkbox" id="array1Check"><label>Any</label></li>
+	<li><input type="checkbox" id="array6Check"><label>Fandom</label></li>
+	<li><input type="checkbox" id="array7Check"><label>Universe</label></li>
+	<li><input type="checkbox" id="array2Check"><label>Symptom</label></li>
+	<li><input type="checkbox" id="array5Check"><label>Time of day</label></li>
+</ul>
+</div>
+<h1>NaNo Fic Generator</h1>
+<br>
+
+		<div class="center">
+		<ul>
+			<li><button class="mgenbutton" onClick="generator()">YEET</button></li>
+		</ul>
+		</div>
+			<div class="genresultspace">
+				<p class="gentext">Fandom+Universe: <br><span class="genresult" id="array1Display"></span>
+				<br class="gentext">Fandom: <br><span class="genresult" id="array6Display"></span>
+				<br class="gentext">Universe: <br><span class="genresult" id="array7Display"></span>
+				<br class="gentext">Symptom: <br><span class="genresult" id="array2Display"></span>
+				<br class="gentext">Time of day: <br><span class="genresult" id="array5Display"></span></p>
+			</div>
+	</div>
+<script>
+	var array1 = ["White Collar","What We Do in the Shadows","Warehouse 13","Gilmore Girls","Kevin Can F*** Himself","Critical Role","Grimm","The Almighty Johnsons","Murdoch Mysteries","It","Raven Cycle","Bright Sessions","Oracle Within","Cursebusters","One fourth","Children of the Fatekeeper","From Above","Portalhoppers","Fernville","Breaking In","Awful Superheroes","Corpse Whisperer","Karen from Work","Welcome to Nachburg","The Collectors","Underground"]
+	var array2 = ["Chills","Congestion","Coughing","Dizziness","Headache","Nausea","Overheating","Sneezing","Sniffling","Tiredness","Diarrhea"]
+	var array5 = ["Morning","Afternoon","Evening","Night"]
+	var array6 = ["White Collar","What We Do in the Shadows","Warehouse 13","Gilmore Girls","Kevin Can F*** Himself","Critical Role","Grimm","The Almighty Johnsons","Murdoch Mysteries","It","Raven Cycle","Bright Sessions"]
+	var array7 = ["Oracle Within","Cursebusters","One fourth","Children of the Fatekeeper","From Above","Portalhoppers","Fernville","Breaking In","Awful Superheroes","Corpse Whisperer","Karen from Work","Welcome to Nachburg","The Collectors","Underground"]
+function generator(){
+  var randomNumber1 = Math.floor(Math.random() * (array1.length));
+  var randomNumber2 = Math.floor(Math.random() * (array2.length));
+  var randomNumber5 = Math.floor(Math.random() * (array5.length));
+  var randomNumber6 = Math.floor(Math.random() * (array6.length));
+  var randomNumber7 = Math.floor(Math.random() * (array7.length));
+	var checkBox = document.getElementById("array1Check");
+	var checkBox = document.getElementById("array2Check");
+	var checkBox = document.getElementById("array5Check");
+	var checkBox = document.getElementById("array6Check");
+	var checkBox = document.getElementById("array7Check");
+	
+  if (array1Check.checked == true){
+  document.getElementById('array1Display').innerHTML = array1[randomNumber1];
+      }
+  if (array2Check.checked == true) {
+      document.getElementById('array2Display').innerHTML = array2[randomNumber2];
+	  }
+  
+  if (array5Check.checked == true) {
+     document.getElementById('array5Display').innerHTML = array5[randomNumber5];
+}
+  if (array6Check.checked == true) {
+     document.getElementById('array6Display').innerHTML = array6[randomNumber6];
+}
+  if (array7Check.checked == true) {
+     document.getElementById('array7Display').innerHTML = array7[randomNumber7];
+}
+}
+</script>
+</body>
+</html>

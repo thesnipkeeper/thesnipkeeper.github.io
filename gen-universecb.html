@@ -1,0 +1,43 @@
+<!DOCTYPE>
+<html>
+<head> <link rel="icon" href="C:\Users\denti\Google Drive\fanficcode\favicon-16x16.png">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="C:\Users\denti\Google Drive\fanficcode\ficlist.css">
+<link rel="stylesheet" type="text/css" href="C:\Users\denti\Google Drive\profiles\navbar.css">
+</head>
+<title>Cursebusters Generator</title>
+<body> <div class="navbar"> <a href="file:///C:/Users/denti/Google%20Drive/profiles/charlist.html">Characters</a> <a href="file:///C:/Users/denti/Google%20Drive/fanficcode/ZZ-ficsoffline.html">Fanfics</a> <a href="file:///C:/Users/denti/Google%20Drive/originalcode/zz-orginalfics.html">Original Fics</a><a href="file:///C:/Users/denti/Google%20Drive/profiles/genlist.html">Generators</a> </div>
+</div> 
+<div class="ocficlist"> 
+<div class="gendirect">
+<h1>Cursebusters Generator</h1>
+<br>
+		<div class="center">
+		<button class="genbutton" onClick="generator()">YEET</button>
+		</div>
+			<div class="genresultspace">
+				<p class="gentext">SC: <br><span class="genresult" id="array1Display"></span>
+				<br class="gentext">CT: <br><span class="genresult" id="array2Display"></span>
+				<br class="gentext">Location: <br><span class="genresult" id="array3Display"></span>
+				<br class="gentext">Torture method: <br><span class="genresult" id="array4Display"></span></p>
+			</div>
+	</div>
+<script>
+	var array1 = ["Spencer","Brooke","Philip"];
+	var array2 = ["Spencer","Brooke","Philip","Other"];
+	var array3 = ["Dorm","School apartment","Cafeteria","Spencer's","Philip's","Classroom","Event","Outside"];
+	var array4 = ["Ear infection","Food poisoning","Bronchitis","Flu","Stomach flu","Cold","Emotional","Sinus infection","Injury"];
+function generator(){
+    var randomNumber1 = Math.floor(Math.random() * (array1.length));
+    document.getElementById('array1Display').innerHTML = array1[randomNumber1];
+    var randomNumber2 = Math.floor(Math.random() * (array2.length));
+    document.getElementById('array2Display').innerHTML = array2[randomNumber2];
+    var randomNumber3 = Math.floor(Math.random() * (array3.length));
+    document.getElementById('array3Display').innerHTML = array3[randomNumber3];
+	var randomNumber4 = Math.floor(Math.random() * (array4.length));
+    document.getElementById('array4Display').innerHTML = array4[randomNumber4];
+}
+
+</script>
+</body>
+</html>

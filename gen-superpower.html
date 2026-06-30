@@ -1,0 +1,33 @@
+<!DOCTYPE>
+<html>
+<head> <link rel="icon" href="C:\Users\denti\Google Drive\fanficcode\favicon-16x16.png">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="C:\Users\denti\Google Drive\fanficcode\ficlist.css">
+<link rel="stylesheet" type="text/css" href="C:\Users\denti\Google Drive\profiles\navbar.css">
+</head>
+<title>Superpower Generator</title>
+<body> <div class="navbar"> <a href="file:///C:/Users/denti/Google%20Drive/profiles/charlist.html">Characters</a> <a href="file:///C:/Users/denti/Google%20Drive/fanficcode/ZZ-ficsoffline.html">Fanfics</a> <a href="file:///C:/Users/denti/Google%20Drive/originalcode/zz-orginalfics.html">Original Fics</a><a href="file:///C:/Users/denti/Google%20Drive/profiles/genlist.html">Generators</a> </div>
+</div> 
+<div class="ocficlist"> 
+<div class="gendirect">
+<h1>Superpower Generator</h1>
+<br>
+		<div class="center">
+		<button class="genbutton" onClick="generator()">YEET</button>
+		</div>
+			<div class="genresultspace">
+				<p class="genresultname" id="powerDisplay"></p>
+			</div>
+	</div>
+<script>
+	var array1 = ["Invisibility","Teleportation","Immortality","Telepathy","Telekinesis","Pyrokinesis","Hydrokinesis","Healing","Decay","Controlling creatures/seeing through their eyes/","Animal communication","Seeing through others' eyes/experiencing their senses","Plant manipulation","Accelerated learning","Spreads disease","Time manipulation","Temporary possession","Shapeshifting","Super speed","Super strength","Hyperkinesis","Sedation/paralysis on contact","Memory manipulation","Human bomb","Toxic saliva/fluid","Acid saliva/fluid","Perception manipulation","Emotion manipulation","Immovable/indestructible","Mind control","Psychometry","Astral projection","Retrocognition","Precognition","Electricity manipulation","Time travel","Dream walker"];
+
+function generator(){
+    var randomNumber = Math.floor(Math.random() * (array1.length));
+    document.getElementById('powerDisplay').innerHTML = array1[randomNumber];
+
+}
+
+</script>
+</body>
+</html>

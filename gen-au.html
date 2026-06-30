@@ -1,0 +1,31 @@
+<!DOCTYPE>
+<html>
+<head> <link rel="icon" href="C:\Users\denti\Google Drive\fanficcode\favicon-16x16.png">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="C:\Users\denti\Google Drive\fanficcode\ficlist.css">
+<link rel="stylesheet" type="text/css" href="C:\Users\denti\Google Drive\profiles\navbar.css">
+</head>
+<title>AU Generator</title>
+<body> <div class="navbar"> <a href="file:///C:/Users/denti/Google%20Drive/profiles/charlist.html">Characters</a> <a href="file:///C:/Users/denti/Google%20Drive/fanficcode/ZZ-ficsoffline.html">Fanfics</a> <a href="file:///C:/Users/denti/Google%20Drive/originalcode/zz-orginalfics.html">Original Fics</a><a href="file:///C:/Users/denti/Google%20Drive/profiles/genlist.html">Generators</a> </div>
+</div> 
+<div class="ocficlist"> 
+<div class="gendirect">
+<h1>AU Generator</h1>
+<br>
+		<div class="center">
+		<button class="genbutton" onClick="generator()">YEET</button>
+		</div>
+			<div class="genresultspace">
+				<p class="gentext">AU: <br><span class="genresult" id="array1Display"></span></p>
+			</div>
+	</div>
+<script>
+	var array1 = ["Bookstore","Coffee shop","College","Diner","Restaurant","B&B","Police","Parent","Teacher","Vet clinic","Hospital","Train","Road trip","Neighbor","Musician","Con artist","Hotel","Bar","Scientist","Church","Social work","Pizzeria","Grocery store","Programmer","Library","Ice cream shop","Clothing store","Traveling","Tavern","Inn","Farmer's market","Actor","Art studio","Office","Jail","Pet store","Social worker","Famous","Bakery","Boarding school","Professor","Cult","Author","Institute","Hacker","Theater","Dancing","Camp counselor","Blacksmith","Salon","Private investigator","FBI","Archive","Sherriff","Radio host","Heist","Catering","Party planner","Reporter","Funeral home","Cemetery","Herbalist","Museum","Royal","Tea shop","Florist","Gardening","Inventor","Thief","Farm","Fireman","Photographer","Artist","Zoo"];
+function generator(){
+    var randomNumber1 = Math.floor(Math.random() * (array1.length));
+    document.getElementById('array1Display').innerHTML = array1[randomNumber1];
+}
+
+</script>
+</body>
+</html>
